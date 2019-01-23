@@ -1,0 +1,42 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<nav role = "navigation" class="navbar navbar-inverse">
+  <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand">ManageMent System</a>
+        <button type="button" class="navbar-toggle" data-target="#navbarCollapse" data-toggle="collapse">
+          <span class="sr-only">Navbar toggle</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse" id="navbarCollapse">
+          <ul class="nav navbar-nav">
+              <li><a routerLink="/reports">Reports</a></li>
+              <li><a routerLink="/singleorder">Single Order</a></li>
+              <li><a routerLink="/multipleorder">Multiple Order</a></li>
+              <li class="active"><a routerLink="/dashboard" >Dashboard</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+              <div class="input-group">
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn-info">GO</button>
+                </span>
+                  <label class="sr-only">search</label><input type="text" id="search" class="form-control" placeholder="search">
+                  <span class="glyphicon glyphicon-search form-control-feedback"></span>
+              </div>
+            </form>
+            <form class="navbar-form navbar-left">
+              <select class="form-control">
+                <option id="o1">Employee ID</option>
+                <option id="o2">Sign out</option>
+              </select>
+            </form>
+            
+      </div>
+  </div>
+  </nav>
+
+
+<router-outlet></router-outlet>

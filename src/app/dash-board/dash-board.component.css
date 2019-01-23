@@ -1,0 +1,28 @@
+.ctnr{
+    border: 2px solid grey;
+}
+
+.box {
+    background-color:cyan;
+    border: 1px solid white;
+    width: 250px;
+    height: 250px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 140px;
+    border-radius: 20px;
+}
+
+.text-value {
+    font-size: 1.3125rem;
+    font-weight: 600;
+    height: 250px;
+    padding: 108px;
+}
+
+a {
+    padding: 64px;
+    border-bottom: 233px;
+    color: #337ab7;
+    text-decoration: none;
+}
