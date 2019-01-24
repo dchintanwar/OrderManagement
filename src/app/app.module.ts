@@ -8,6 +8,7 @@ import { SingleComponentComponent } from './single-component/single-component.co
 import { SingleOrderComponent } from './single-order/single-order.component';
 import { MultipleOrderComponent } from './multiple-order/multiple-order.component';
 import { ReportsComponent } from './reports/reports.component';
+import{ DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   declarations: [
@@ -17,11 +18,13 @@ import { ReportsComponent } from './reports/reports.component';
     SingleOrderComponent,
     MultipleOrderComponent,
     ReportsComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

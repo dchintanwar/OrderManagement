@@ -37,9 +37,17 @@
   </tbody>
 </table>  -->
 
- <table class="table">
+<div class="container">
+    <div class="row"></div>
+      <div class="col-lg-4">
+ <!-- <table class="table table-bordered table-striped table-hover" datatable [dtOptions]="dtOptions">
   <tbody *ngFor="let i of ordernumber">
-  <tr>
+  <tr >
+    <th colspan="2" class="align-items-center">
+    Oredr Details
+    </th>
+  </tr>
+    <tr>
     <td>Order ID</td>
     <td>{{i.OrderList.orderdetails.orderId}}</td>
   </tr>
@@ -56,4 +64,36 @@
         <td>{{i.OrderList.orderdetails.materialUsed}}</td>
       </tr>
 </tbody>
-</table>  
+</table>  -->
+<table class="table table-bordered table-striped table-hover" datatable [dtOptions]="dtOptions">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Last</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div> 
+</div>
