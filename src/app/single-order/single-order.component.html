@@ -1,0 +1,59 @@
+<p>
+  single-order works!
+</p>
+<div class="container">
+  <div class="row">
+   
+<form class="form-inline">
+  <div class="col-lg-2"></div>
+  <div class="col-lg-4">
+  <div class="form-group" [class.has-error]="orderno.touched && orderno.invalid" [class.has-success]="orderno.valid">
+    <label for="order number">Order number:</label>
+    <input type="number" class="form-control" id="oredrnumber" name="oredrnumber" required  [(ngModel)]="oredrnumber"
+    #orderno="ngModel">
+  </div>
+</div>
+  <div class="col-lg-2">
+    <span class="help-block" *ngIf="orderno.touched && orderno.invalid"><p>Invalid Order</p></span>
+  </div>
+  <div class="col-lg-3"> 
+     <button type="submit" class="btn btn-default" [disabled]="orderno.invalid">Submit</button>
+  </div>
+  </form>
+</div>
+<!-- 
+<table class="table-bordered">
+  <tr class="d-table-row">
+    <th>Order Details</th>
+    <th>Address</th>
+    <th>Contact Details</th>
+  </tr>
+  <tbody>
+    <tr *ngFor="let O of ordernumber">
+      <td>{{O.OrderList.orderdetails.orderId}}</td>
+      <td>{{O.OrderList.orderAddress.pinCode}}</td>
+      <td>{{O.OrderList.orderContactDetails.filed1}}</td>
+    </tr>
+  </tbody>
+</table>  -->
+
+ <table class="table">
+  <tbody *ngFor="let i of ordernumber">
+  <tr>
+    <td>Order ID</td>
+    <td>{{i.OrderList.orderdetails.orderId}}</td>
+  </tr>
+  <tr>
+      <td>Product Name</td>
+      <td>{{i.OrderList.orderdetails.productName}}</td>
+  </tr>
+  <tr>
+      <td>Product Description</td>
+      <td>{{i.OrderList.orderdetails.productDescription}}</td>
+    </tr>
+    <tr>
+        <td>materialUsed</td>
+        <td>{{i.OrderList.orderdetails.materialUsed}}</td>
+      </tr>
+</tbody>
+</table>  
