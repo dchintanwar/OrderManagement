@@ -9,6 +9,7 @@ import { SingleOrderComponent } from './single-order/single-order.component';
 import { MultipleOrderComponent } from './multiple-order/multiple-order.component';
 import { ReportsComponent } from './reports/reports.component';
 import{ DataTablesModule } from 'angular-datatables';
+import{BsDatepickerModule} from 'ngx-bootstrap/datepicker'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import{ DataTablesModule } from 'angular-datatables';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    DataTablesModule
+    DataTablesModule,
+    BsDatepickerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

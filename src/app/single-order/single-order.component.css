@@ -1,0 +1,9 @@
+.container {
+    width: 1170px;
+    PADDING: 25PX;
+};
+
+.setMargin{
+    width: 1170px;
+    border:1px solid black;
+}

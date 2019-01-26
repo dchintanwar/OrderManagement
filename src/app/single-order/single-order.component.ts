@@ -43,6 +43,20 @@ export class SingleOrderComponent implements OnInit {
       }
     }}];
 
+    log:any=[{"time":"hh:mm:AM","Date":"dd/mm/yy","status":"dd/mm/yy","Description":"Discription1"},
+    {"time":"hh:mm:AM","Date":"dd/mm/yy","status":"dd/mm/yy","Description":"Discription1"},
+    {"time":"hh:mm:AM","Date":"dd/mm/yy","status":"dd/mm/yy","Description":"Discription1"},
+    {"time":"hh:mm:AM","Date":"dd/mm/yy","status":"dd/mm/yy","Description":"Discription1"},
+    {"time":"hh:mm:AM","Date":"dd/mm/yy","status":"dd/mm/yy","Description":"Discription1"},
+    {"time":"hh:mm:AM","Date":"dd/mm/yy","status":"dd/mm/yy","Description":"Discription1"},
+    {"time":"hh:mm:AM","Date":"dd/mm/yy","status":"dd/mm/yy","Description":"Discription1"},
+    {"time":"hh:mm:AM","Date":"dd/mm/yy","status":"dd/mm/yy","Description":"Discription1"},
+    {"time":"hh:mm:AM","Date":"dd/mm/yy","status":"dd/mm/yy","Description":"Discription1"},
+    {"time":"hh:mm:AM","Date":"dd/mm/yy","status":"dd/mm/yy","Description":"Discription1"},
+    {"time":"hh:mm:AM","Date":"dd/mm/yy","status":"dd/mm/yy","Description":"Discription1"},
+    {"time":"hh:mm:AM","Date":"dd/mm/yy","status":"dd/mm/yy","Description":"Discription1"},
+    {"time":"hh:mm:AM","Date":"dd/mm/yy","status":"dd/mm/yy","Description":"Discription1"}]
+
   ngOnInit() {
   
   }

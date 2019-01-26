@@ -1,4 +1,240 @@
 <p>
   multiple-order works!
 </p>
+<form>
 
+  <div class="container">
+    <div class="row">
+      <h4 class="text-center">Multiple order</h4>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <select class="form-control">
+            <option id="op1">India</option>
+            <option id="op2">China</option>
+            <option id="op3">Japan</option>
+            <option id="op4">UK</option>
+            <option id="op4">USA</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-3">
+
+        <div class="row">
+          <div class="form-group">
+            <div class="col-md-4">
+              <label>Start Date</label>
+            </div>
+            <div class="col-md-6">
+              <input type="text" id="startDate" bsDatepicker class="form-control">
+            </div>
+            <div class="col-md-2">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-4">
+            <label>End Date</label>
+          </div>
+          <div class="col-md-6">
+            <input type="text" id="endtDate" bsDatepicker class="form-control">
+          </div>
+          <div class="col-md-2">
+            <span class="glyphicon glyphicon-calendar"></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <input type="submit" class="form-control">
+      </div>
+    </div>
+  </div>
+</form>
+
+<div class="container">
+  <div class="row">
+    <h4 class="bg-primary text-center">Multiple order list</h4>
+  </div>
+  <table class="table table-striped table-hover" datatable [dtOptions]="dtOptions">
+    <thead>
+    <tr>
+      <th>Header1</th>
+      <th>Header2</th>
+      <th>Header3</th>
+      <th>Header4</th>
+      <th>Header5</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let i of multipleOrder">
+      <td>
+        <a class="btn" data-target="#singleOrderModal" data-toggle="modal">{{i.r1}}</a>
+      </td>
+      <td>{{i.r2}}</td>
+      <td>{{i.r3}}</td>
+      <td>{{i.r4}}</td>
+      <td>{{i.r5}}</td>
+    </tr>
+  </tbody>
+    <div class="modal fade" id="singleOrderModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" data-dismiss="modal"></button>
+            <h4>Single Order</h4>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+
+              <div class="row">
+                <div class="col-md-9">
+                  <div class="align-content-center">
+                    <h4 class="mb-5 bg-primary dt-head-center text-center">Order List</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <table class="table table-bordered table-striped table-hover">
+                    <!-- datatable [dtOptions]="dtOptions" -->
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Last</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let i of ordernumber">
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Order ID</td>
+                        <td>{{i.OrderList.orderdetails.orderId}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Product Name</td>
+                        <td>{{i.OrderList.orderdetails.productName}}</td>
+
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Product Description</td>
+                        <td>{{i.OrderList.orderdetails.productDescription}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-md-3">
+                  <table class="table table-bordered table-striped table-hover">
+                    <!-- datatable [dtOptions]="dtOptions" -->
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Last</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let i of ordernumber">
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Order ID</td>
+                        <td>{{i.OrderList.orderdetails.orderId}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Product Name</td>
+                        <td>{{i.OrderList.orderdetails.productName}}</td>
+
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Product Description</td>
+                        <td>{{i.OrderList.orderdetails.productDescription}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-md-3">
+                  <table class="table table-bordered table-striped table-hover">
+                    <!-- datatable [dtOptions]="dtOptions" -->
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Last</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let i of ordernumber">
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Order ID</td>
+                        <td>{{i.OrderList.orderdetails.orderId}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Product Name</td>
+                        <td>{{i.OrderList.orderdetails.productName}}</td>
+
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Product Description</td>
+                        <td>{{i.OrderList.orderdetails.productDescription}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9">
+              <div class="align-content-center">
+                <h4 class="mb-5 bg-primary dt-head-center text-center">Order Log</h4>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-9">
+              <table class="table table-bordered table-striped table-hover table-responsive" datatable [dtOptions]="dtOptions">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let i of log">
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>{{i.time}}</td>
+                    <td>{{i.Date}}</td>
+                    <td>{{i.status}}</td>
+                    <td>{{i.Description}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <div class="col-md-3">
+                <button class="btn" data-dismiss="modal">Cancel</button>
+                <button class="btn">Update</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>

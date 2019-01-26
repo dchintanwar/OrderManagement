@@ -1,3 +1,41 @@
 <p>
   reports works!
 </p>
+
+<form>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="text-center">Reports</h4>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-4">
+          <select class="form-control">
+              <option id="op1">India</option>
+              <option id="op2">China</option>
+              <option id="op3">Japan</option>
+              <option id="op4">UK</option>
+              <option id="op4">USA</option>
+            </select>
+      </div>
+      <div class="col-md-4">
+          <input type="submit" class="form-control">
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+
+</form>
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+<div *ngIf="chart">
+
+<canvas id="canvas">{{chart}}</canvas>
+</div>
+</div>
+<div class="col-md-6">
+
+  </div>
+</div>
+</div>
