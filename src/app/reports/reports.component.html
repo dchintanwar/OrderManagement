@@ -3,7 +3,7 @@
 </p>
 
 <form>
-  <div class="container">
+  <div class="container pb-5">
     <div class="row">
       <div class="col-md-12">
         <h4 class="text-center">Reports</h4>
@@ -29,13 +29,20 @@
 <div class="container">
 <div class="row">
 <div class="col-md-6">
-<div *ngIf="chart">
-
-<canvas id="canvas">{{chart}}</canvas>
+    <fusioncharts
+    width="500"
+    height="400" 
+    type="Column2d"
+    [dataSource]="dataSource">
+  </fusioncharts> 
 </div>
-</div>
-<div class="col-md-6">
-
+  <div class="col-md-6">
+    <fusioncharts
+    width="500"
+    height="400" 
+    type="Pie2D"
+    [dataSource]="dataSourcePi">
+  </fusioncharts>
   </div>
 </div>
 </div>

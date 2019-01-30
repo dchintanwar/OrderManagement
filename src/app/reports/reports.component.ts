@@ -1,54 +1,77 @@
 import { Component, OnInit } from '@angular/core';
- import  Chart  from 'chart.js';
+
 @Component({
   selector: 'app-reports',
   templateUrl: './reports.component.html',
   styleUrls: ['./reports.component.css']
 })
 export class ReportsComponent implements OnInit {
-  chart:any = [];
-  
+  dataSource:any = [];
+  dataSourcePi:any = [];
   
   constructor() {
+    this.dataSource ={
+    "chart": {
+      "caption": "Single order",
+      // "subCaption": "In MMbbl = One Million barrels",
+      "xAxisName": "Date",
+      "yAxisName": "Time",
+      "numberSuffix": "hrs",
+      "theme": "fusion",
+  },
+  // Chart Data
+  "data": [{
+      "label": new Date().toJSON().slice(0,10).replace(/-/g,'/'),
+      "value": "10"
+  }, {
+      "label": new Date().toJSON().slice(0,10).replace(/-/g,'/'),
+      "value": "11"
+  }, {
+      "label": new Date().toJSON().slice(0,10).replace(/-/g,'/'),
+      "value": "12"
+  }, {
+      "label": new Date().toJSON().slice(0,10).replace(/-/g,'/'),
+      "value": "14"
+  }, {
+      "label": new Date().toJSON().slice(0,10).replace(/-/g,'/'),
+      "value": "50"
+  }, {
+      "label": new Date().toJSON().slice(0,10).replace(/-/g,'/'),
+      "value": "60"
+  }, {
+      "label": new Date().toJSON().slice(0,10).replace(/-/g,'/'),
+      "value": "70"
+  }, {
+      "label": new Date().toJSON().slice(0,10).replace(/-/g,'/'),
+      "value": "80"
+  }]
+}; // end of this.dataSource
+
+//Pi Chart
+this.dataSourcePi = {
+  "chart": {
+      "caption": "Split of order",
+      // "subCaption": "Last year",
+      "use3DLighting": "0",
+      "showPercentValues": "1",
+      "decimals": "1",
+      "useDataPlotColorForLabels": "1",
+      "theme": "fusion"
+  },
+  "data": [
+      {
+          "label": "Single Order",
+          "value": "40"
+      },
+      {
+          "label": "Multiple Order",
+          "value": "60"
+      }
+  ]
+};
+
   }
 
   ngOnInit() {
-    let temp_max:number=300;
-  let temp_min:number=200;
-
-    this.chart = new Chart('canvas', {
-      type: 'line',
-      data: {
-        labels: Date,
-        datasets: [{
-          data: temp_max,
-          borderColor: '#3cba9f',
-          fill: false
-        },
-        {
-          data: temp_min,
-          borderColor: '#ffcc00',
-          fill: false
-        }]
-      },
-      options: {
-        legend: {
-          display: false
-        },
-        scales: {
-          xAxes: [{
-            display: true
-          }],
-          yAxes: [{
-            display: true
-          }]
-        }
-      }
-    })
-    console.log("---------->"+this.chart.temp_min)
+   }
   }
-
-  
-
-
-}
